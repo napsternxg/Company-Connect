@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Company Connect</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery-1.4.2.js" ></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>
+<script type="text/javascript" src="js/Myriad_Pro_italic_600.font.js"></script>
+<script type="text/javascript" src="js/Myriad_Pro_italic_400.font.js"></script>
+<script type="text/javascript" src="js/Myriad_Pro_400.font.js"></script>
+<script type="text/javascript" src="js/validation.js"></script>
+<script language="javascript" type="text/javascript" >
+<!-- function validateForm()
+{
+//alert("hi");
+	var nm = document.forms["form_1"]["name"].value;
+	var cn = document.forms["form_1"]["company"].value;
+	var clg = document.forms["form_1"]["college"].value;
+	var ex = document.forms["form_1"]["experience"].value;
+	var skill = document.forms["form_1"]["skills"].value;
+	if ((nm==null || nm=="") && (cn==null || cn=="") && (clg==null || clg=="") && (ex==null || ex=="") && (skill==null || skill==""))
+  	{
+		alert("Please fill at least one field");  		
+  		return false;
+  	}
+  	else
+  	{ 	
+  	 	
+  	 	return true;
+  	 }	
+}
+ --></script>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/ie6_script_other.js"></script>
+<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+</head>
+<body id="page1">
+<!-- START PAGE SOURCE -->
+<div class="body1">
+  <div class="main">
+    <header>
+      <div class="wrapper">
+        <div class="header"><h1>Company Connect</h1></div>
+        <div class="right">
+          <nav>
+            <ul id="menu">
+              <li id="menu_active"><a href="index.jsp">Home</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+<div class="main">
+  <div id="banner">
+    <div class="text1"> Search<span>Simplified</span>
+    </div>
+</div>
+<div class="main">
+  <section id="content">
+    <article class="col1">
+      <div class="pad_1">
+        <h2>Search Options </h2>
+      <form name="form_1" action="try.html" method="post" onsubmit="return validateForm()" >
+         <!--  <div class="wrapper pad_bot1">
+            <div class="radio marg_right1">
+              <input type="radio" name="name1">
+              Round Trip<br>
+              <input type="radio" name="name1">
+              One Way </div>
+            <div class="radio">
+              <input type="radio" name="name1">
+              Empty-Leg<br>
+              <input type="radio" name="name1">
+              Multi-Leg </div>
+          </div> -->
+          <div class="wrapper"> Name:
+            <div class="bg">
+              <input type="text" name="name"  > <!-- class="input input1" value="Enter a Name of Person" onBlur="if(this.value=='') this.value='Enter a Name of Person'" onFocus="if(this.value =='Enter a Name of Person' ) this.value=''"> -->
+            </div>
+          </div>
+          <div class="wrapper"> Company:
+            <div class="bg">
+              <input type="text" name="company" ><!-- class="input input1" value="Enter Company Name" onBlur="if(this.value=='') this.value='Enter Company Name'" onFocus="if(this.value =='Enter Company Name' ) this.value=''"> -->
+            </div>
+          </div>
+          <div class="wrapper"> College:
+ 				<div class="bg">
+              <input type="text" name="college" ><!-- class="input input1" value="Enter College Name" onBlur="if(this.value=='') this.value='Enter College Name'" onFocus="if(this.value =='Enter College Name' ) this.value=''"> -->
+            </div>          
+ <!--            <div class="wrapper">
+              <div class="bg left">
+                <input type="text" class="input input2" value="mm/dd/yyyy " onBlur="if(this.value=='') this.value='mm/dd/yyyy '" onFocus="if(this.value =='mm/dd/yyyy ' ) this.value=''">
+              </div>
+              <div class="bg right">
+                <input type="text" class="input input2" value="12:00am" onBlur="if(this.value=='') this.value='12:00am'" onFocus="if(this.value =='12:00am' ) this.value=''">
+              </div>
+            </div>
+          </div>
+          <div class="wrapper"> Return Date and Time:
+            <div class="wrapper">
+              <div class="bg left">
+                <input type="text" class="input input2" value="mm/dd/yyyy " onBlur="if(this.value=='') this.value='mm/dd/yyyy '" onFocus="if(this.value =='mm/dd/yyyy ' ) this.value=''">
+              </div>
+              <div class="bg right">
+                <input type="text" class="input input2" value="12:00am" onBlur="if(this.value=='') this.value='12:00am'" onFocus="if(this.value =='12:00am' ) this.value=''">
+              </div>
+            </div> -->
+          </div>
+         <div class="wrapper"> Experience:
+            <div class="bg">
+              <input type="text" name="experience" > <!-- class="input input1" value="Enter Desired Experience" onBlur="if(this.value=='') this.value='Enter Desired Experience'" onFocus="if(this.value =='Enter Desired Experience' ) this.value=''"> -->
+            </div>
+          </div>
+          <div class="wrapper">
+            <p>Skills:</p>
+            <div class="bg left">
+              <input type="text" name="skills" > <!-- class="input input2" value="Desired Skills" onBlur="if(this.value=='') this.value='Desired Skills'" onFocus="if(this.value =='Desired Skills' ) this.value=''"> -->
+            </div>
+            	<input type="submit"  value="go!" class="button2"> 
+            </div>
+        </form>
+
+      </div>
+   
+</div>
+<div class="body2">
+  <div class="main">
+    <footer>
+      <div class="footerlink">
+        <p class="lf">Copyright &copy; 2012 Batch 7- All Rights Reserved</p>
+        <p class="rf"></p>
+        <div style="clear:both;"></div>
+      </div>
+    </footer>
+  </div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+<!-- END PAGE SOURCE -->
+</body>
+</html>

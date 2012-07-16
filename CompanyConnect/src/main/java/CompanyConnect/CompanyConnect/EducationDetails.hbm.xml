@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="CompanyConnect.CompanyConnect">
+
+	<class name="EducationDetails" table="education">
+	<id name="educationId" column="education_id">
+			<generator class="native" />
+		</id>
+		<property name="id" column="id" />
+		<property name="institute" column="university" />
+		<property name="degree" column="degree" />
+		<property name="major" column="trade" />
+		
+	</class>
+
+</hibernate-mapping>

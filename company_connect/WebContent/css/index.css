@@ -1,0 +1,245 @@
+@CHARSET "ISO-8859-1";
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.wrapper {
+	width: 100%;
+	height: 90px;
+	overflow: hidden;
+	background-color: #35a6bb;
+	overflow: hidden;
+}
+
+body {
+	background: #fff;
+	border: 0;
+	font: 14px Arial, Helvetica, sans-serif;
+	color: #3c4046;
+	line-height: 20px;
+	min-width: 100%;
+	margin: 0;
+}
+
+.main {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.main_footer {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.body {
+	background: url(../images/bg_top.jpg) top center no-repeat #1e2023;
+}
+
+.body {
+	background: url(../images/bg_bot.jpg) top center no-repeat #1e2023;
+}
+
+.page .header {
+	margin-top: 30px;
+	font-family: tahoma;
+	font-size: 40px;
+	color: #000000;
+	font-weight: 200;
+	margin-left: 100px;
+}
+
+.page .caption {
+	margin-top: 15px;
+	margin-left: 30%;
+	font-size: 25px;
+	color: aliceblue;
+}
+
+.main-body-background {
+	width: 100%;
+	background: url('images/magnifying+glass.jpg');
+	background-color: aliceblue;
+}
+
+.main-body {
+	width: 100%;
+	background-color: white;
+}
+
+#search-box {
+	width: 100%;
+	height: 120px;
+	background-color: #BDEEFD;
+}
+
+.search-box-header {
+	font-size: 20px;
+	font-weight: 50;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+.plus,.cross {
+	width: 60px;
+	height: 20px;
+	border: solid 1px black;
+	background-color: #FF2900;
+	border-radius: 5px;
+	color: white;
+	font: bold 12px tahoma;
+	text-align: center;
+	
+}
+
+.plus-div,.button {
+	text-align: center;
+	float: left;
+	width: 150px;
+}
+
+.plus:hover,.close:hover {
+	
+}
+
+.search-option select {
+	
+    width: 30%;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #ECFAB6;
+
+}
+
+.search-option .input {
+	background-color: #ECFAB6; color: #000000; width: 30%;font-size: 20px;
+	padding: 0 5px;
+}
+
+#addSearch{
+	
+    background-color: rgb(14, 207, 14);
+    border: solid 1px #000000;
+    border-radius: 5px;
+	
+}
+
+.button2 {
+	background: url(../images/button2_bg.gif) top repeat-x;
+	width: 100%;
+	height: 30px;
+	font: bold 20px arial;
+	line-height: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0 20px;
+	margin-left: 10px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	behavior: url(../js/PIE.htc);
+	position: relative;
+}
+
+.button-container {
+	text-align: center;
+	width: 320px;;
+	height: 30%;
+	margin-left: 39%;
+}
+
+.button2 {
+	background: url(../images/button2_bg.gif) top repeat-x;
+}
+
+.button2:hover {
+	background: #1f759b;
+}
+
+.margin {
+	height: 0px;
+	border: black solid 3px;
+}
+
+.results-main-container {
+	width: 100%;
+	background-color: #BDEEFD;
+}
+
+.expand{
+	background-color: #ffffff;
+	font-size: 20px;
+	border: solid 1px #000000;
+	float: right;
+}
+.profile_pic{
+	width: 40px;
+	float: left;
+	margin-right: 10px;
+	border: solid 3px white;
+	border-radius: 5px;
+}
+.profile_data{
+	list-style-type: square;
+	text-align: left;
+}
+.footer {
+	bottom: 0;
+	background-color: black;
+	padding: 5px 0 0 0;
+	height: 30px;
+	width: 100%;
+	overflow: hidden;
+	font-size: 12px;
+	line-height: 18px;
+	color: #fff;
+	text-align: center;
+}
+
+.footerlink {
+	padding: 0;
+}
+
+.footerlink p {
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+	white-space: nowrap;
+	text-indent: inherit;
+	color: #fff;
+}
+
+.footerlink a {
+	color: #fff;
+	font-weight: normal;
+	margin: inherit;
+	padding: inherit;
+	border: none;
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+.footerlink a:hover {
+	color: #fff;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.footerlink .lf {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.footerlink .rf {
+	float: right;
+}

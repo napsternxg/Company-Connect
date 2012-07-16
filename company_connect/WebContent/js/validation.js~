@@ -1,0 +1,40 @@
+function validateForm()
+{
+//alert("hi");
+	var nm = document.forms["form_1"]["name"].value;
+	var cn = document.forms["form_1"]["company"].value;
+	var clg = document.forms["form_1"]["college"].value;
+	var ex = document.forms["form_1"]["experience"].value;
+	var skill = document.forms["form_1"]["skills"].value;
+	if ((nm==null || nm=="") && (cn==null || cn=="") && (clg==null || clg=="") && (ex==null || ex=="") && (skill==null || skill==""))
+  	{
+		alert("Please fill at least one field");  		
+  		return false;
+  	}
+  	else
+  	{ 	
+  		//alert("here");
+  	 	if(!(nm==null || nm=="") && !isNaN(nm)  )
+  	 	{
+  	 		alert("Enter Valid name");
+  	 		return false;
+  	 	}	
+  	 	else if(!(cn==null || cn=="") && !isNaN(cn))
+  	 	{
+  	 		  	alert("Enter valid company name");
+  	 		  	return false;
+  	 	}	  	
+  	 	else if(!(clg==null || clg=="") && !isNaN(clg))
+  	 	{
+  	 		  	alert("Enter valid college name");
+  	 		  	return false;
+  	 	}	  	
+  	 	else if(!(ex==null || ex=="") && isNaN(ex))
+  	 	{ 
+  	 	 	alert("Enter valid exp in months");
+  	 	 	return false;
+		}
+  	 	return true;
+  	 }	
+}
+

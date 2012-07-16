@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="CompanyConnect.CompanyConnect">
+
+	<class name="Personal" table="person">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<property name="firstName" column="first_name" />
+		<property name="lastName" column="last_name" />
+		<property name="connections" column="connections" />
+		<property name="location" column="location" />
+		<property name="emailId" column="email_id" />
+		<property name="mobileNumber" column="mobile_number" />
+
+		<property name="linkedInURL" column="linkedinURL" />
+		<property name="photoURL" column="photo_url" />
+	</class>
+
+</hibernate-mapping>

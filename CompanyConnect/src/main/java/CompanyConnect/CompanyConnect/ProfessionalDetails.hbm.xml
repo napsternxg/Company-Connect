@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="CompanyConnect.CompanyConnect">
+
+	<class name="ProfessionalDetails" table="position">
+		<id name="positionId" column="position_id">
+			<generator class="native" />
+		</id>
+		<property name="id" column="id" />
+		<property name="position" column="title" />
+		<property name="organization" column="company" />
+		<property name="duration" column="duration" />
+		
+	</class>
+
+</hibernate-mapping>
