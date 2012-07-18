@@ -1,4 +1,6 @@
-var parameters = new Array("Name", "Location","Company","Experience","Industry","Skills","College","Degree","Trade");
+
+
+var parameters = new Array("Name", "Location","Company","Experience","Skills","College","Degree","Trade");
 var parametersAdded = new Array();
 function onBlurField(field) {
 			field.style.backgroundColor="#FFFFFF";
@@ -42,7 +44,7 @@ function addNewSearch(){
 		}
 	}
 	var st="";
-	if(liCount <= 9) {
+	if(liCount <= 8) {
 		//remove already added fields
 		var name="";
 		var count = 0;

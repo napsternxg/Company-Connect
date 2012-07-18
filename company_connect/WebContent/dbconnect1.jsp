@@ -35,6 +35,7 @@ String exp=request.getParameter("experience");
 String sk=request.getParameter("skills");
 String deg=request.getParameter("degree");
 String tra=request.getParameter("trade");
+String loc=request.getParameter("location");
 
 //out.println(name);
 //out.println(com);
@@ -88,17 +89,17 @@ if(name!=null && !name.equals(""))
 	}	
 	if(n==1)
 	{
-		query1=query1+" and ( LCASE(first_name) like '"+first_name+"' or LCASE(last_name) like '" +first_name+"') ";
-		//query1=query1+" and LCASE(first_name) like '"+last_name+"'";
+		query1=query1+" and ( LCASE(first_name) like '"+first_name+"%' or LCASE(last_name) like '" +first_name+"%') ";
+		//query1=query1+" and LCASE(first_name) like '"+last_name+"%'";
 	
 	}
 	if(n>1 && first_name!=null && !first_name.equals(""))
 	{
-		query1=query1+" and LCASE(first_name) like '"+first_name+"'";
+		query1=query1+" and LCASE(first_name) like '"+first_name+"%'";
 	}
 	if(last_name!=null && !last_name.equals(""))
 	{
-		query1=query1+" and LCASE(last_name) like '"+last_name+"'";
+		query1=query1+" and LCASE(last_name) like '"+last_name+"%'";
 	}
 }
 
@@ -106,9 +107,15 @@ if(com!=null && !com.equals(""))
 {
 	String a="";
 	a=com.toLowerCase();
-	query1+=" and id in (select id from position where LCASE(company) like '%"+a+"%')";
+	query1+=" and id in (select id from position where LCASE(company) like '"+a+"%')";
 }
 
+if(loc!=null && !loc.equals(""))
+{
+	String a="";
+	a=loc.toLowerCase();
+	query1+=" and id in (select id from person where LCASE(location) like '"+a+"%')";
+}
 
 if(col!=null && !col.equals(""))
 {
@@ -145,8 +152,9 @@ if(deg!=null && !deg.equals(""))
 {
 	String c="";
 	c=deg.toLowerCase();
-	query1+=" and id in (select id from education where LCASE(trade) like '%"+c+"%')";
+	query1+=" and id in (select id from education where LCASE(degree) like '%"+c+"%')";
 }
+query1+= " order by first_name , last_name ";
 Statement st = con.createStatement();
 //System.out.println(query1);
 ResultSet rs = st.executeQuery(query1);
@@ -164,6 +172,7 @@ while(rs.next())
 	temp.url=rs.getString("linkedinURL");
 	temp.mob=rs.getString("mobile_number");
 	temp.picURL = rs.getString("photo_url");
+	temp.location=rs.getString("location");
 	
 query1=" select * from education where id="+id;
 	
@@ -227,16 +236,10 @@ query1=" select * from education where id="+id;
 		}
 		if(duration!=null && duration>=0)
 		{
-			temp.experience+= " - " ;
-			if(duration/12!=0 && duration/12!=1)
-				temp.experience+= (duration/12+ " Years ");
-			if(duration/12==1)
-				temp.experience+= (duration/12+ " Year ");
-			duration=duration%12;
 			if(duration!=0 && duration!=1)
-				temp.experience+= (duration+" Months ");
+				temp.experience+= ("-"+duration+" Months ");
 			if(duration==1)
-				temp.experience+= (duration+" Month ");
+				temp.experience+= ("-"+duration+" Month ");
 		}
 		temp.experience+=";";
 				
@@ -297,13 +300,14 @@ query1=" select * from education where id="+id;
     				String education =RST.get(ii).education;
     				String experience=RST.get(ii).experience;
     				String skills=RST.get(ii).skills;
+    				String location=RST.get(ii).location;
     				%>
     				<div class="ex"  onclick="return toggleMe('para<%=ii+"'"%>)"> 
 					 <%out.println("<img src='"+RST.get(ii).picURL+"' class='profile_pic'><h2>"+RST.get(ii).name+"<span class='expand'>+</span></h2>");%>			  
 					<div id="para<%=ii+"\""%> style="display:none">
 					
 					<table>
-					
+						<tr><td><%if(location!=null)out.println("<b>Current Location: </b>"+RST.get(ii).location);%></td></tr>					
 						<tr><td><%if(email!=null)out.println("<b>Email: </b>"+RST.get(ii).email);%></td></tr>
 	    				<tr><td><%if(mob!=null)out.println("<b>Mobile Number: </b>"+RST.get(ii).mob);%> </td></tr>
 	    				<tr><td><%if(url1!=null)out.println("<b>Linkedin URL: </b><a href='"+RST.get(ii).url+"' target='_blank'>Go to LinkedIn Profile</a>");%> </td></tr>

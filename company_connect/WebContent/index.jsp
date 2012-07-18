@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/index.js" ></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js" ></script>
 <script type="text/javascript" src="js/validation.js"></script>
-<title>Insert title here</title>
+<title>Company Connect - Search Simplified</title>
 </head>
 <body>
 	<div class="page">
@@ -37,7 +37,6 @@
 					  <option value="Location">Location</option>
 					  <option value="Company">Company</option>
 					  <option value="Experience">Experience</option>
-					  <option value="Industry">Industry</option>
 					  <option value="Skills">Skills</option>
 					  <option value="College">College</option>
 					  <option value="Degree">Degree</option>
@@ -49,10 +48,10 @@
         	</ul>
         	<div class="button-container">
 	      	  	<div class="plus-div">
-					<button class="button2" id="addSearch" onClick=" return addNewSearch()">ADD</button>
+					<button class="button2" id="addSearch" onClick=" return addNewSearch()">ADD FILTER</button>
 				</div>
 				<div class="button">
-					<input type="submit" class="button2" value="go!" onClick="return ajaxRequest();"></input>
+					<input type="submit" id="submit" class="button2" value="go!" onClick="return ajaxRequest();"></input>
 				</div>
 			</div>
         </form>
