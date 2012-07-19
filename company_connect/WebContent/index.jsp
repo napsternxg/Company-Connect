@@ -42,7 +42,7 @@
 					  <option value="Degree">Degree</option>
 					  <option value="Trade">Trade</option>
 					</select>
-					<input type="text" class="input" id="input1" value="" name="name" onFocus=onFocusField(this) onBlur=onBlurField(this)></input>
+					<input type="text" class="input" id="input1" value="" name="name" onFocus=onFocusField(this) onBlur=onBlurField(this) x-webkit-speech></input>
 					<button class= 'cross' onClick="return removeSearch(this)">Remove</button>
         		</li>
         	</ul>

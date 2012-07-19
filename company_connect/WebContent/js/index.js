@@ -58,7 +58,7 @@ function addNewSearch(){
 			}
 		}
 		var newIndex = parseInt(document.getElementById('search-options-list').getElementsByTagName('li')[len-1].getAttribute('index')) + 1;
-		var html= "<li class='search-option' id='search-option-" + newIndex + "' index='" + newIndex + "'><select  id='search-select-" + newIndex + "' onChange = onSelectedOption(this)>" + st + "</select><input type='text' class='input' id='input"+newIndex+"' value='' name='" + name + "' onFocus=onFocusField(this) onBlur=onBlurField(this)></input><button class= 'cross' onClick='return removeSearch(this)''>Remove</button></li>";
+		var html= "<li class='search-option' id='search-option-" + newIndex + "' index='" + newIndex + "'><select  id='search-select-" + newIndex + "' onChange = onSelectedOption(this)>" + st + "</select><input type='text' class='input' id='input"+newIndex+"' value='' name='" + name + "' onFocus=onFocusField(this) onBlur=onBlurField(this) x-webkit-speech></input><button class= 'cross' onClick='return removeSearch(this)''>Remove</button></li>";
 		$("#search-options-list").append(String(html));
 		var newHeight = document.getElementById("search-box").offsetHeight + 30;
 		document.getElementById("search-box").style.height = newHeight;
