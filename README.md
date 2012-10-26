@@ -1,4 +1,5 @@
-==Company Connect Application==
+Company Connect Application
+============================
 
 To connect organization profiles of employees with their respective linkedin data.
 
